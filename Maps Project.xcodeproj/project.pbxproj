@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		098FE7F8237979D000AAB7C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 098FE7F7237979D000AAB7C9 /* Assets.xcassets */; };
 		098FE7FB237979D000AAB7C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 098FE7FA237979D000AAB7C9 /* Preview Assets.xcassets */; };
 		098FE7FE237979D000AAB7C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098FE7FC237979D000AAB7C9 /* LaunchScreen.storyboard */; };
+		098FE80723797A7400AAB7C9 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098FE80623797A7400AAB7C9 /* MainController.swift */; };
+		098FE80A23797BE100AAB7C9 /* LBTATools in Frameworks */ = {isa = PBXBuildFile; productRef = 098FE80923797BE100AAB7C9 /* LBTATools */; };
+		09917AB6237FEF160094D423 /* LocationsCaroselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09917AB5237FEF160094D423 /* LocationsCaroselController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		098FE7FA237979D000AAB7C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		098FE7FD237979D000AAB7C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		098FE7FF237979D000AAB7C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		098FE80623797A7400AAB7C9 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		09917AB5237FEF160094D423 /* LocationsCaroselController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsCaroselController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098FE80A23797BE100AAB7C9 /* LBTATools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +62,7 @@
 		098FE7F0237979CF00AAB7C9 /* Maps Project */ = {
 			isa = PBXGroup;
 			children = (
+				098FE80523797A5900AAB7C9 /* Main */,
 				098FE7F1237979CF00AAB7C9 /* AppDelegate.swift */,
 				098FE7F3237979CF00AAB7C9 /* SceneDelegate.swift */,
 				098FE7F5237979CF00AAB7C9 /* ContentView.swift */,
@@ -75,6 +82,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		098FE80523797A5900AAB7C9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				098FE80623797A7400AAB7C9 /* MainController.swift */,
+				09917AB5237FEF160094D423 /* LocationsCaroselController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,6 +107,9 @@
 			dependencies = (
 			);
 			name = "Maps Project";
+			packageProductDependencies = (
+				098FE80923797BE100AAB7C9 /* LBTATools */,
+			);
 			productName = "Maps Project";
 			productReference = 098FE7EE237979CF00AAB7C9 /* Maps Project.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +138,9 @@
 				Base,
 			);
 			mainGroup = 098FE7E5237979CF00AAB7C9;
+			packageReferences = (
+				098FE80823797BE100AAB7C9 /* XCRemoteSwiftPackageReference "LBTATools" */,
+			);
 			productRefGroup = 098FE7EF237979CF00AAB7C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,6 +168,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09917AB6237FEF160094D423 /* LocationsCaroselController.swift in Sources */,
+				098FE80723797A7400AAB7C9 /* MainController.swift in Sources */,
 				098FE7F2237979CF00AAB7C9 /* AppDelegate.swift in Sources */,
 				098FE7F4237979CF00AAB7C9 /* SceneDelegate.swift in Sources */,
 				098FE7F6237979CF00AAB7C9 /* ContentView.swift in Sources */,
@@ -342,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		098FE80823797BE100AAB7C9 /* XCRemoteSwiftPackageReference "LBTATools" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bhlvoong/LBTATools";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.12;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		098FE80923797BE100AAB7C9 /* LBTATools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 098FE80823797BE100AAB7C9 /* XCRemoteSwiftPackageReference "LBTATools" */;
+			productName = LBTATools;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 098FE7E6237979CF00AAB7C9 /* Project object */;
 }
